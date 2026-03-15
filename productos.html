@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="assets/img/logo-badeff.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Escaleras de Aluminio, Fibra y Plataformas | BADEFF</title>
+  <meta name="description" content="Explorá nuestro catálogo de escaleras de aluminio reforzadas, escaleras dieléctricas de fibra de vidrio y plataformas de trabajo industriales. Fabricación nacional." />
+  <link rel="stylesheet" href="assets/css/styles-v4.css" />
+<style>
+/* EASTER EGG: Hormigas Caminadoras (V4.2 - INLINE) */
+.bg-ant { position: fixed; z-index: 2 !important; pointer-events: none; width: 24px; height: 32px; opacity: 0.65; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2)); }
+.ant-leg { stroke: #111; stroke-width: 1.2; fill: none; transform-origin: center; }
+.ant-leg-left { animation: leg-swing-left 0.2s infinite alternate ease-in-out; }
+.ant-leg-right { animation: leg-swing-right 0.2s infinite alternate-reverse ease-in-out; }
+@keyframes leg-swing-left { 0% { transform: rotate(-5deg); } 100% { transform: rotate(5deg); } }
+@keyframes leg-swing-right { 0% { transform: rotate(5deg); } 100% { transform: rotate(-5deg); } }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a class="brand" href="index.html" aria-label="Inicio BADEFF">BADEFF</a>
+      <div class="header-auth" aria-label="Acceso de usuario">
+        <a href="cuenta.html?tab=login" class="auth-btn">Iniciar sesión</a>
+        <a href="cuenta.html?tab=registro" class="auth-btn">Registrarse</a>
+      </div>
+      <nav class="site-nav" data-nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html?tipo=postventa">Postventa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Nuestras Escaleras y Soluciones de Altura</h1>
+      <p class="section-subtitle">Explorá todas nuestras líneas. Podés filtrar por material y por tipo de escalera.</p>
+      <div class="products-top-filters" aria-label="Filtros principales" style="flex-wrap: wrap; gap: 20px;">
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span style="font-weight: 600; font-size: 0.95rem; color: #555;">Material:</span>
+          <button class="filter-btn active" data-filter-material="todos">Todos</button>
+          <button class="filter-btn" data-filter-material="alu">Aluminio</button>
+          <button class="filter-btn" data-filter-material="fv">Fibra de vidrio</button>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span style="font-weight: 600; font-size: 0.95rem; color: #555;">Peldaño:</span>
+          <button class="filter-btn active" data-filter-step="todos">Todos</button>
+          <button class="filter-btn" data-filter-step="plano">Plano</button>
+          <button class="filter-btn" data-filter-step="D">En "D"</button>
+        </div>
+      </div>
+
+      <div class="products-layout">
+        <aside class="products-sidebar card" aria-label="Filtros por tipo">
+          <h2>Tipos de escalera</h2>
+          <button class="sidebar-filter-btn active" data-filter-family="todos">Todos los tipos</button>
+          <button class="sidebar-filter-btn" data-filter-family="paralela">Paralelas y Extensibles</button>
+          <button class="sidebar-filter-btn" data-filter-family="tijera">Tijeras</button>
+          <button class="sidebar-filter-btn" data-filter-family="plataforma">Plataformas / Burro</button>
+          <button class="sidebar-filter-btn" data-filter-family="tres-en-uno">Tres en uno</button>
+          <button class="sidebar-filter-btn" data-filter-family="especiales">Especiales</button>
+        </aside>
+
+        <section class="products-grid" id="catalogo-productos">
+          <article class="card product-card" data-product-card data-material="alu" data-family="paralela-simple">
+            <img src="assets/img/industrial-wip-1.png" alt="Paralela simple" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Paralela simple</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Paralela simple</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="paralela-simple">
+            <img src="assets/img/industrial-wip-2.png" alt="Paralela simple" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Paralela simple</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Paralela simple</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tijera-pintor">
+            <img src="assets/img/industrial-wip-3.png" alt="Tijera pintor" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera pintor</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Tijera pintor</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tijera-pintor">
+            <img src="assets/img/factory-1.png" alt="Tijera pintor" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera pintor</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Tijera pintor</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tijera-industrial">
+            <img src="assets/img/factory-2.png" alt="Tijera industrial" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera industrial</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Tijera industrial</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tijera-industrial">
+            <img src="assets/img/factory-3.png" alt="Tijera industrial" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera industrial</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Tijera industrial</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="extensible-2-hojas">
+            <img src="assets/img/badeff_industrial_1.png" alt="Extensible 2 hojas" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Extensible 2 hojas</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Extensible 2 hojas</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="extensible-2-hojas">
+            <img src="assets/img/badeff_industrial_2.png" alt="Extensible 2 hojas" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Extensible 2 hojas</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Extensible 2 hojas</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="extensible-3-hojas">
+            <img src="assets/img/badeff_industrial_3.png" alt="Extensible 3 hojas" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Extensible 3 hojas</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Extensible 3 hojas</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="extensible-3-hojas">
+            <img src="assets/img/industrial-wip-1.png" alt="Extensible 3 hojas" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Extensible 3 hojas</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Extensible 3 hojas</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tres-en-uno">
+            <img src="assets/img/industrial-wip-2.png" alt="Tres en uno" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tres en uno</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Tres en uno</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tres-en-uno">
+            <img src="assets/img/industrial-wip-3.png" alt="Tres en uno" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tres en uno</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Tres en uno</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tijera-con-plataforma">
+            <img src="assets/img/factory-1.png" alt="Tijera con plataforma" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con plataforma</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Tijera con plataforma</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tijera-con-plataforma">
+            <img src="assets/img/factory-2.png" alt="Tijera con plataforma" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con plataforma</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Tijera con plataforma</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tijera-con-extencion">
+            <img src="assets/img/factory-3.png" alt="Tijera con extensión" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con extensión</h2><p class="product-meta">Peldaño D · ALU</p><span class="badge">Tijera con extensión</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tijera-con-extencion">
+            <img src="assets/img/badeff_industrial_1.png" alt="Tijera con extensión" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con extensión</h2><p class="product-meta">Peldaño D · FV</p><span class="badge">Tijera con extensión</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+
+          <article class="card product-card" data-product-card data-material="alu" data-family="paralela-simple">
+            <img src="assets/img/badeff_industrial_2.png" alt="Paralela simple" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Paralela simple</h2><p class="product-meta">Peldaño plano · ALU</p><span class="badge">Paralela simple</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="paralela-simple">
+            <img src="assets/img/badeff_industrial_3.png" alt="Paralela simple" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Paralela simple</h2><p class="product-meta">Peldaño plano · FV</p><span class="badge">Paralela simple</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tijera-pintor">
+            <img src="assets/img/industrial-wip-1.png" alt="Tijera pintor" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera pintor</h2><p class="product-meta">Peldaño plano · ALU</p><span class="badge">Tijera pintor</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tijera-pintor">
+            <img src="assets/img/industrial-wip-2.png" alt="Tijera pintor" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera pintor</h2><p class="product-meta">Peldaño plano · FV</p><span class="badge">Tijera pintor</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="tijera-industrial">
+            <img src="assets/img/industrial-wip-3.png" alt="Tijera industrial" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera industrial</h2><p class="product-meta">Peldaño plano · ALU</p><span class="badge">Tijera industrial</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="tijera-industrial">
+            <img src="assets/img/factory-1.png" alt="Tijera industrial" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera industrial</h2><p class="product-meta">Peldaño plano · FV</p><span class="badge">Tijera industrial</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="plataforma-doble-acceso">
+            <img src="assets/img/factory-2.png" alt="Tijera con plataforma doble acceso" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con plataforma doble acceso</h2><p class="product-meta">Peldaño plano · ALU</p><span class="badge">Doble acceso</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="plataforma-doble-acceso">
+            <img src="assets/img/factory-3.png" alt="Tijera con plataforma doble acceso" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con plataforma doble acceso</h2><p class="product-meta">Peldaño plano · FV</p><span class="badge">Doble acceso</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="plataforma-acceso-simple">
+            <img src="assets/img/badeff_industrial_1.png" alt="Tijera con plataforma acceso simple" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con plataforma acceso simple</h2><p class="product-meta">Peldaño plano · ALU</p><span class="badge">Acceso simple</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="plataforma-acceso-simple">
+            <img src="assets/img/badeff_industrial_2.png" alt="Tijera con plataforma acceso simple" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Tijera con plataforma acceso simple</h2><p class="product-meta">Peldaño plano · FV</p><span class="badge">Acceso simple</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+
+          <article class="card product-card" data-product-card data-material="alu" data-family="plataforma-burro">
+            <img src="assets/img/badeff_industrial_3.png" alt="Plataforma tipo burro" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Plataforma tipo burro</h2><p class="product-meta">Sin rodado · ALU</p><span class="badge">Plataforma tipo burro</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="plataforma-burro">
+            <img src="assets/img/industrial-wip-1.png" alt="Plataforma tipo burro" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Plataforma tipo burro</h2><p class="product-meta">Sin rodado · FV</p><span class="badge">Plataforma tipo burro</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="plataforma-burro">
+            <img src="assets/img/industrial-wip-2.png" alt="Plataforma tipo burro" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Plataforma tipo burro</h2><p class="product-meta">Rodado simple · ALU</p><span class="badge">Plataforma tipo burro</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="plataforma-burro">
+            <img src="assets/img/industrial-wip-3.png" alt="Plataforma tipo burro" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Plataforma tipo burro</h2><p class="product-meta">Rodado simple · FV</p><span class="badge">Plataforma tipo burro</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="plataforma-burro">
+            <img src="assets/img/factory-1.png" alt="Plataforma tipo burro" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Plataforma tipo burro</h2><p class="product-meta">Rodado completo · ALU</p><span class="badge">Plataforma tipo burro</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="plataforma-burro">
+            <img src="assets/img/factory-2.png" alt="Plataforma tipo burro" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Plataforma tipo burro</h2><p class="product-meta">Rodado completo · FV</p><span class="badge">Plataforma tipo burro</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          
+          <article class="card product-card" data-product-card data-material="alu" data-family="especiales">
+            <img src="assets/img/factory-3.png" alt="Especial 1" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Producto Especial 1</h2><p class="product-meta">Personalizado · ALU</p><span class="badge">Especiales</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="especiales">
+            <img src="assets/img/badeff_industrial_1.png" alt="Especial 2" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Producto Especial 2</h2><p class="product-meta">Personalizado · FV</p><span class="badge">Especiales</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="alu" data-family="especiales">
+            <img src="assets/img/badeff_industrial_2.png" alt="Especial 3" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Producto Especial 3</h2><p class="product-meta">Personalizado · ALU</p><span class="badge">Especiales</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+          <article class="card product-card" data-product-card data-material="fv" data-family="especiales">
+            <img src="assets/img/badeff_industrial_3.png" alt="Especial 4" loading="lazy" />
+            <div class="product-body"><h2 class="product-title">Producto Especial 4</h2><p class="product-meta">Personalizado · FV</p><span class="badge">Especiales</span>
+            <button class="btn btn-secondary btn-carrito" style="width: 100%; margin-top: 15px;"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+          </div>
+          </article>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+      <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <div class="footer-title">BADEFF</div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:badeffesc@yahoo.com.ar" class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            badeffesc@yahoo.com.ar
+          </a>
+          <span class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            2199-7913
+          </span>
+          <span class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Dirección
+          </span>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="productos.html" class="footer-link">Productos</a>
+          <a href="nosotros.html" class="footer-link">Nosotros</a>
+          <a href="contacto.html" class="footer-link">Contacto</a>
+          <div class="footer-hours">
+            <h4>Horarios de Atención</h4>
+            <p>
+              Lun. a Vie. 08:00-12:00 / 13:00-17:00 hs<br>
+              Sábados 08:00-12:00 hs
+            </p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Sociales</h4>
+          <a href="https://www.instagram.com/badeff_escaleras/" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/company/badeff" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a>
+          <a href="https://wa.me/5491165255083" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 BADEFF. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/script-v4.js"></script>
+<script>
+(function() {
+  function createAnt() {
+    if (window.innerWidth < 300) return;
+    const ant = document.createElement('div');
+    ant.classList.add('bg-ant');
+    ant.innerHTML = '<svg viewBox="0 0 24 32" width="100%" height="100%"><g class="ant-body" fill="#111"><path class="ant-leg ant-leg-left" d="M10,11 Q4,9 3,13" /><path class="ant-leg ant-leg-right" d="M14,11 Q20,9 21,13" /><path class="ant-leg ant-leg-left" d="M10,14 Q3,14 2,19" /><path class="ant-leg ant-leg-right" d="M14,14 Q21,14 22,19" /><path class="ant-leg ant-leg-left" d="M10,16 Q4,20 4,26" /><path class="ant-leg ant-leg-right" d="M14,16 Q20,20 20,26" /><circle cx="12" cy="7" r="3" /><ellipse cx="12" cy="14" rx="2.5" ry="4.5" /><ellipse cx="12" cy="23" rx="4.5" ry="6" /><path d="M10,6 Q6,2 8,1" fill="none" stroke="#111" stroke-width="1"/><path d="M14,6 Q18,2 16,1" fill="none" stroke="#111" stroke-width="1"/></g></svg>';
+    document.body.appendChild(ant);
+    const side = Math.floor(Math.random() * 4);
+    const margin = 100;
+    let x, y, tx, ty;
+    if (side === 0) { x = Math.random() * window.innerWidth; y = -margin; }
+    else if (side === 1) { x = window.innerWidth + margin; y = Math.random() * window.innerHeight; }
+    else if (side === 2) { x = Math.random() * window.innerWidth; y = window.innerHeight + margin; }
+    else { x = -margin; y = Math.random() * window.innerHeight; }
+    if (side === 0) { tx = Math.random() * window.innerWidth; ty = window.innerHeight + margin*2; }
+    else if (side === 1) { tx = -margin*2; ty = Math.random() * window.innerHeight; }
+    else if (side === 2) { tx = Math.random() * window.innerWidth; ty = -margin*2; }
+    else { tx = window.innerWidth + margin*2; ty = Math.random() * window.innerHeight; }
+    let curX = x, curY = y, stepCount = 0, steps = 40;
+    const totalDuration = 12000;
+    const stepTime = totalDuration / steps;
+    function move() {
+      if (stepCount >= steps) { ant.remove(); return; }
+      const progress = (stepCount + 1) / steps;
+      const nextX = x + (tx - x) * progress + Math.sin(stepCount * 0.5) * 20;
+      const nextY = y + (ty - y) * progress + Math.cos(stepCount * 0.5) * 20;
+      const angle = Math.atan2(nextY - curY, nextX - curX) * (180 / Math.PI) + 90;
+      ant.style.transition = 'all ' + (stepTime/1000) + 's linear';
+      ant.style.left = nextX + 'px'; ant.style.top = nextY + 'px'; ant.style.transform = 'rotate(' + angle + 'deg)';
+      curX = nextX; curY = nextY; stepCount++;
+      setTimeout(move, stepTime);
+    }
+    ant.style.left = x + 'px'; ant.style.top = y + 'px';
+    requestAnimationFrame(move);
+  }
+  function schedule() { createAnt(); setTimeout(schedule, 15000); }
+  setTimeout(schedule, 2000);
+})();
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="assets/img/logo-badeff.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuenta | BADEFF</title>
+  <meta name="description" content="Iniciar sesión o registrarse en BADEFF." />
+  <link rel="stylesheet" href="assets/css/styles-v4.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a class="brand" href="index.html" aria-label="Inicio BADEFF">BADEFF</a>
+      <div class="header-auth" aria-label="Acceso de usuario">
+        <a href="cuenta.html?tab=login" class="auth-btn">Iniciar sesión</a>
+        <a href="cuenta.html?tab=registro" class="auth-btn">Registrarse</a>
+      </div>
+      <nav class="site-nav" data-nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html?tipo=postventa">Postventa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Mi cuenta</h1>
+      <p class="section-subtitle">Accedé o creá tu cuenta para gestionar consultas y solicitudes.</p>
+
+      <div class="card" style="padding:20px;">
+        <div class="filters" role="tablist" aria-label="Tabs de cuenta">
+          <button class="filter-btn active" data-account-tab="login" aria-selected="true">Iniciar sesión</button>
+          <button class="filter-btn" data-account-tab="registro" aria-selected="false">Registrarse</button>
+        </div>
+
+        <p class="notice" data-account-alert></p>
+
+        <section data-account-panel="login">
+          <form class="form" data-login-form>
+            <div>
+              <label for="login-email">Email</label>
+              <input id="login-email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="login-password">Contraseña</label>
+              <input id="login-password" name="password" type="password" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Ingresar</button>
+          </form>
+        </section>
+
+        <section data-account-panel="registro" hidden>
+          <form class="form" data-register-form>
+            <div>
+              <label for="reg-nombre">Nombre completo</label>
+              <input id="reg-nombre" name="fullName" type="text" required />
+            </div>
+            <div>
+              <label for="reg-email">Email</label>
+              <input id="reg-email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="reg-password">Contraseña</label>
+              <input id="reg-password" name="password" type="password" required />
+            </div>
+            <div>
+              <label for="reg-confirm-password">Confirmar contraseña</label>
+              <input id="reg-confirm-password" name="confirmPassword" type="password" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Crear cuenta</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <div class="footer-title">BADEFF</div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:badeffesc@yahoo.com.ar" class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            badeffesc@yahoo.com.ar
+          </a>
+          <span class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            2199-7913
+          </span>
+          <span class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Dirección
+          </span>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="productos.html" class="footer-link">Productos</a>
+          <a href="nosotros.html" class="footer-link">Nosotros</a>
+          <a href="contacto.html" class="footer-link">Contacto</a>
+          <div class="footer-hours">
+            <h4>Horarios de Atención</h4>
+            <p>
+              Lun. a Vie. 08:00-12:00 / 13:00-17:00 hs<br>
+              Sábados 08:00-12:00 hs
+            </p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Sociales</h4>
+          <a href="https://www.instagram.com/badeff_escaleras/" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/company/badeff" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a>
+          <a href="https://wa.me/5491165255083" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 BADEFF. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script-v4.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>

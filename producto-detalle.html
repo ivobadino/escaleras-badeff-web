@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="assets/img/logo-badeff.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle de Producto | BADEFF</title>
+  <meta name="description" content="Detalle de escalera BADEFF." />
+  <link rel="stylesheet" href="assets/css/styles-v4.css" />
+  <style>
+    .breadcrumb {
+      padding: 15px 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .breadcrumb a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    .product-detail-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    @media (min-width: 768px) {
+      .product-detail-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .main-image {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+    .thumbnail-list {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #fdfdfd;
+      transition: border-color var(--transition-speed);
+    }
+    .thumbnail:hover, .thumbnail.active {
+      border-color: var(--primary-color);
+    }
+
+    .product-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .detail-title {
+      font-size: 2rem;
+      color: var(--dark-color);
+      margin: 0;
+    }
+    .detail-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #eee;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #555;
+    }
+    .detail-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 10px 0;
+    }
+    /* Acciones */
+    .action-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .btn-lg {
+      padding: 15px;
+      font-size: 1.1rem;
+    }
+    .btn-wsp {
+      background-color: #25D366;
+      color: white;
+      border: none;
+    }
+    .btn-wsp:hover {
+      background-color: #1ebe5d;
+      color: white;
+    }
+    
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 20px 0;
+    }
+
+    /* Detalles extendidos */
+    .extended-details-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    @media (min-width: 900px) {
+      .extended-details-layout {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+    .description-card, .specs-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .description-card h3, .specs-card h3 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .specs-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .specs-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f1f1;
+      display: flex;
+      justify-content: space-between;
+    }
+    .specs-list li:last-child {
+      border-bottom: none;
+    }
+    .specs-list strong {
+      color: #555;
+    }
+    #error-message {
+      text-align: center;
+      padding: 100px 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a class="brand" href="index.html" aria-label="Inicio BADEFF">BADEFF</a>
+      <div class="header-auth" aria-label="Acceso de usuario">
+        <a href="cuenta.html?tab=login" class="auth-btn">Iniciar sesión</a>
+        <a href="cuenta.html?tab=registro" class="auth-btn">Registrarse</a>
+      </div>
+      <nav class="site-nav" data-nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html?tipo=postventa">Postventa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section" style="padding-top: 20px;">
+    <div class="container" id="product-container">
+      
+      <!-- Cargando... -->
+      <div id="loading" style="text-align:center; padding: 50px;">Cargando producto...</div>
+      
+      <div id="error-message" style="display: none;">
+        <h2>Producto no encontrado</h2>
+        <p>No pudimos encontrar la escalera que buscabas.</p>
+        <a href="productos.html" class="btn btn-primary" style="margin-top:20px;">Volver al catálogo</a>
+      </div>
+
+      <div id="product-content" style="display: none;">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">Inicio</a> &gt; 
+          <a href="productos.html">Productos</a> &gt; 
+          <span id="bc-title">Nombre del Producto</span>
+        </div>
+
+        <!-- Parte Superior: Grid Galeria + Info Base -->
+        <div class="product-detail-layout">
+          <!-- Galeria -->
+          <div class="gallery-container">
+            <img id="main-product-img" src="" alt="Imagen principal" class="main-image">
+            <div class="thumbnail-list" id="thumbnail-container">
+              <!-- Thumbnails inyectados dinamicamente -->
+            </div>
+            
+            <!-- Calculadora de altura -->
+            <div class="calculator-card" style="margin-top: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+              <h3 style="font-size: 1.1rem; margin-top: 0; margin-bottom: 15px; color: #444; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; display: inline-block;">Calculadora de Altura Útil</h3>
+              <p style="font-size: 0.85rem; color: #666; margin-top: 0; margin-bottom: 15px;">Calculá la altura de trabajo estimada sumando peldaños (separación de 30 cm).</p>
+              <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 15px;">
+                <label for="step-count" style="font-size: 0.95rem; color: #555; font-weight: 500;">Cant. peldaños:</label>
+                <input type="number" id="step-count" min="3" placeholder="Ej: 5" style="width: 80px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+              </div>
+              <div style="font-size: 0.95rem; line-height: 1.6; color: #333; background: #fdfdfd; padding: 10px; border-radius: 5px; border: 1px dashed #ccc;">
+                <div>Altura en metros: <strong id="calc-meters" style="color: var(--primary-color);">- m</strong></div>
+                <div>Altura en pies: <strong id="calc-feet" style="color: var(--primary-color);">- ft</strong></div>
+                <div id="calc-warning" style="color: #d9534f; font-size: 0.85rem; margin-top: 8px; display: none; font-weight: 500;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Columna Derecha -->
+          <div class="product-info-col">
+            <div>
+              <span id="detail-category" class="detail-badge">Categoría</span>
+              <h1 id="detail-title" class="detail-title">Cargando...</h1>
+            </div>
+            
+            <p id="detail-short-desc" style="color: #666; font-size: 1.1rem; line-height: 1.6;">
+              Descripción corta.
+            </p>
+
+            <!-- Acciones -->
+            <div class="action-group">
+              <button id="btn-add-cart" class="btn btn-secondary btn-lg btn-carrito"><svg class="cart-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Agregar al carrito</button>
+              <button id="btn-wsp" class="btn btn-wsp btn-lg">💬 Solicitar asesoramiento</button>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Ficha tecnica lateral rapida -->
+            <div class="specs-card" style="box-shadow: none; border: 1px solid #eee; padding: 20px;">
+               <h3 style="font-size: 1.1rem; border: none; margin-bottom: 10px;">Especificaciones Rápidas</h3>
+               <ul class="specs-list" id="quick-specs">
+                 <!-- Inyectado via JS -->
+               </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte Inferior: Descripción extendida -->
+        <div class="extended-details-layout">
+          <div class="description-card">
+            <h3>Descripción del Producto</h3>
+            <div id="detail-long-desc" style="line-height: 1.8; color: #444;">
+              <!-- Descripcion HTML inyectada aqui -->
+            </div>
+          </div>
+
+          <div class="description-card">
+            <h3>Envío y Formas de Pago</h3>
+            <p style="margin-bottom: 15px;"><strong>📦 Envíos a todo el país.</strong></p>
+            <p style="color: #666; font-size: 0.95rem;">Consultá las tarifas de envío para tu ubicación a través de nuestro canal de WhatsApp. Despachamos dentro de las 48hs hábiles.</p>
+            <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
+            <p style="margin-bottom: 15px;"><strong>💳 Medios de pago</strong></p>
+            <ul style="color: #666; font-size: 0.95rem; padding-left: 20px;">
+              <li>Transferencia bancaria / depósito (10% de descuento).</li>
+              <li>Tarjetas de crédito (Hasta 3 cuotas sin interés)</li>
+              <li>Efectivo al retirar en sucursal.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+      <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <div class="footer-title">BADEFF</div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:badeffesc@yahoo.com.ar" class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            badeffesc@yahoo.com.ar
+          </a>
+          <span class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            2199-7913
+          </span>
+          <span class="footer-link">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Dirección
+          </span>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="productos.html" class="footer-link">Productos</a>
+          <a href="nosotros.html" class="footer-link">Nosotros</a>
+          <a href="contacto.html" class="footer-link">Contacto</a>
+          <div class="footer-hours">
+            <h4>Horarios de Atención</h4>
+            <p>
+              Lun. a Vie. 08:00-12:00 / 13:00-17:00 hs<br>
+              Sábados 08:00-12:00 hs
+            </p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Sociales</h4>
+          <a href="https://www.instagram.com/badeff_escaleras/" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/company/badeff" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a>
+          <a href="https://wa.me/5491165255083" class="footer-link" target="_blank" rel="noopener noreferrer">
+            <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 BADEFF. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/script-v4.js"></script>
+  <script src="assets/js/detalle.js"></script>
+</body>
+</html>
+
+
